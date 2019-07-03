@@ -6,4 +6,4 @@ before_install:
   - docker build -t simpelimp/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run simpelimp/docker-react npm run test -- --coverage
+  - docker run -e CI=true simpelimp/docker-react npm run test -- --coverage
